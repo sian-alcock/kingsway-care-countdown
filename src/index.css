@@ -56,7 +56,7 @@ img {
 }
 
 .instructionText {
-  margin: 4px auto;
+  margin: 18px auto;
   color: #555555;
 }
 
@@ -234,6 +234,14 @@ img {
 }
 .share-button {
   margin: 5px 10px 15px 5px;
+}
+
+.guidance {
+  display: block;
+}
+
+.guidanceOff {
+  display: none;
 }
 
 @media only screen and (min-width: 600px) {

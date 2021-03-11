@@ -33,6 +33,7 @@ class App extends React.Component {
             computerChoicesOpen: false,
             enteredText: '',
             wordMismatch: false,
+            instructions: 'closed'
           };
 
           this.getVowel = this.getVowel.bind(this);
@@ -294,6 +295,19 @@ class App extends React.Component {
           enteredText: wordToCheck
         })
       }
+
+      showDetailedInstructions () {
+        if (this.state.instructions === 'closed') {
+          this.setState({
+            instructions: 'open'
+          })
+        } else {
+          this.setState({
+            instructions: 'closed'
+          })
+        }
+
+      }
     
     render() {
       const shareUrl = "https://sian-alcock.github.io/kingsway-care-countdown/";
@@ -349,6 +363,14 @@ class App extends React.Component {
               </EmailShareButton>
               </div> 
             <div className="instructionContainer">
+              <p><a href="#" onClick={this.showDetailedInstructions.bind(this)}>{this.state.instructions === "open" ? "Hide play instructions" : "Show play instructions"}</a></p>
+              <div className={this.state.instructions === "open" ? "guidance" : "guidanceOff"}>
+                <p>Choose a mix of nine consonants and vowels (normally no more than four vowels) and click the Start Countdown button to start the timer.</p>
+                <p>Write down the longest word you can find that is made up of only the nine chosen letters.</p>
+                <p>At the end of the game, ask each player to declare the longest word that they have found.  The player with the longest word wins the round.</p>
+                <p>If you are unsure if the player with the longest word has a genuine word, you can check it in the online dictionary.</p>
+                <p>The computer will also generate a list of words which you can view if you wish.</p>
+              </div>
               <p className={this.state.playMode === "choosingLetters" ? "instructionText" : "instructionTextOff" }>
                 Choose a letter
               </p>         
