@@ -321,7 +321,7 @@ class App extends React.Component {
               </div>
       
             <div className="innerContainer">
-            <h1 className="pageTitle">Let's Play Countdown</h1>
+            <h1 className="pageTitle">Let's Play Countdown!</h1>
             <p className="introduction"><strong>Covid Lockdown</strong> is hard. You may have run out of things to talk about with your friends and family. So why not get together online and have fun playing our <strong>Countdown game</strong>. We hope we can do our bit to combat loneliness and isolation and bring a little more joy to your lives. <strong>Share with someone you can't wait to see in real life</strong>.</p>
             <div className="socialShare">
               <FacebookShareButton
