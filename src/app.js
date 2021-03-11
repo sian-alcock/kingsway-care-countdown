@@ -313,9 +313,9 @@ class App extends React.Component {
         return (
             <div className="profile">
             <div className="headerBar">
-              <div className="logo">
+              <a href="https://kingswaycare.com/" title="Kingsway Care" className="logo">
                 <img src={imagefile}/>
-              </div>
+              </a>
               </div>
       
             <div className="innerContainer">
