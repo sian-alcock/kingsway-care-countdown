@@ -8,13 +8,11 @@ import {
   EmailShareButton,
   FacebookShareButton,
   TwitterShareButton,
-  WhatsappShareButton,
-  FacebookMessengerShareButton
+  WhatsappShareButton
 } from "react-share";
 import {
   EmailIcon,
   FacebookIcon,
-  FacebookMessengerIcon,
   TwitterIcon,
   WhatsappIcon
 } from "react-share";
@@ -346,13 +344,6 @@ class App extends React.Component {
               >
               <WhatsappIcon size={32} round />
               </WhatsappShareButton>
-              <FacebookMessengerShareButton
-              url={shareUrl}
-              appId="521270401588372"
-              className="share-button"
-              >
-              <FacebookMessengerIcon size={32} round />
-              </FacebookMessengerShareButton>
               <EmailShareButton
                 url={shareUrl}
                 subject={title}
