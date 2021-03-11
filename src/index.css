@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap');
+
 body {
   font-family: 'Jost', sans-serif;
   box-sizing: border-box;
@@ -9,22 +10,43 @@ body {
 }
 
 .headerBar {
+  position: relative;
   height: 100%;
   background-color: #fbce3e;
   width: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  height: 100px;
+}
+
+img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
 }
 
 .pageTitle {
+  display: none;
   padding: 5px 0;
+  color: #555555;
+  text-align: center;
 }
 
 .innerContainer {
+  padding: 0 1rem;
   max-width: 1200px;
-  margin-top: 60px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.introduction {
+  margin-bottom: 15px;
+  font-size: 21px;
 }
 
 .instructionContainer {
@@ -63,7 +85,6 @@ body {
   height: 100%;
   font-size: 22px;
   width: 30px;
-  /* padding-bottom: 5px; */
   border: 3px solid #fbce3e;
   text-align: center;
   color: #555555;
@@ -76,7 +97,6 @@ body {
   border-radius: 1px;
   font-size: 18px;
   padding: 10px;
-  /* min-width: 150px; */
 }
 
 
@@ -95,7 +115,6 @@ body {
   position: relative;
   top:3px;
   left:2px;
-  /* box-shadow: 0px 0px; */
 }
 
 .button:hover{
@@ -210,6 +229,13 @@ body {
   margin: 15px auto;
 }
 
+.socialShare {
+  text-align: center;
+}
+.share-button {
+  margin: 5px 10px 15px 5px;
+}
+
 @media only screen and (min-width: 600px) {
   .clock {
     width: 400px;
@@ -228,5 +254,14 @@ body {
     padding-bottom: 5px;
   
   }
+
+  .pageTitle {
+    display: block;
+  }
+  }
+
+  footer {
+    background-color: #fbce3e;
+    padding: 1rem;
   }
 

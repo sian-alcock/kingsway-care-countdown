@@ -3,6 +3,21 @@ import React from 'react'
 import axios from "axios";
 import './index.css';
 import soundfile from './assets/countdown-1.mp3';
+import imagefile from './assets/kingsway-logo-yellow.png';
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+  FacebookMessengerShareButton
+} from "react-share";
+import {
+  EmailIcon,
+  FacebookIcon,
+  FacebookMessengerIcon,
+  TwitterIcon,
+  WhatsappIcon
+} from "react-share";
 
 class App extends React.Component {
     constructor() {
@@ -212,10 +227,6 @@ class App extends React.Component {
         e.preventDefault();
         const wordToCheck = event.target['inputWord'].value.toLowerCase();
         const lettersLowerCase = this.state.letters.join('|').toLowerCase().split('|');
-    
-        // console.log(wordToCheck)
-        // console.log(wordToCheck.split(''))
-        // console.log(this.state.letters)
         
         if(wordToCheck.split('').every(letter => lettersLowerCase.includes(letter))) {
           this.setState({
@@ -285,11 +296,58 @@ class App extends React.Component {
       }
     
     render() {
+      const shareUrl = "https://sian-alcock.github.io/kingsway-care-countdown/";
+      const title = "Let's play the Kingsway Care Countdown Game!";
         return (
-          
             <div className="profile">
-            <div className="headerBar"><h1 className="pageTitle">Countdown</h1></div> 
+            <div className="headerBar">
+              <div className="logo">
+                <img src={imagefile}/>
+              </div>
+              </div>
+      
             <div className="innerContainer">
+            <h1 className="pageTitle">Let's Play Countdown</h1>
+            <p className="introduction"><strong>Covid Lockdown</strong> is hard. You may have run out of things to talk about with your friends and family. So why not get together online and have fun playing our <strong>Countdown game</strong>. We hope we can do our bit to combat loneliness and isolation and bring a little more joy to your lives. <strong>Share with someone you can't wait to see in real life</strong>.</p>
+            <div className="socialShare">
+              <FacebookShareButton
+                url={shareUrl}
+                quote={title}
+                className="share-button"
+                >
+                <FacebookIcon size={32} round />
+              </FacebookShareButton>
+              <TwitterShareButton
+                url={shareUrl}
+                subject={title}
+                className="share-button"
+                >
+                <TwitterIcon size={32} round />
+              </TwitterShareButton>
+              <WhatsappShareButton
+              url={shareUrl}
+              subject={title}
+              separator=":: "
+              className="share-button"
+              >
+              <WhatsappIcon size={32} round />
+              </WhatsappShareButton>
+              <FacebookMessengerShareButton
+              url={shareUrl}
+              appId="521270401588372"
+              className="share-button"
+              >
+              <FacebookMessengerIcon size={32} round />
+              </FacebookMessengerShareButton>
+              <EmailShareButton
+                url={shareUrl}
+                subject={title}
+                body="Covid Lockdown is hard. You may have run out of things to talk about with your friends and family. So why not get together online and have fun playing our Countdown game. We hope we can do our bit to combat loneliness and isolation and bring a little more joy to your lives."
+                className="share-button"
+              >
+                <EmailIcon size={32} round />
+              </EmailShareButton>
+              </div> 
             <div className="instructionContainer">
               <p className={this.state.playMode === "choosingLetters" ? "instructionText" : "instructionTextOff" }>
                 Choose a letter
@@ -424,6 +482,11 @@ class App extends React.Component {
                 </div>
             </div>
             </div>
+            <footer>
+              <div className="innerContainer">
+                <p>Kingsway Care enables independent living at home, whatever that means to you. For some it is practical help around the house, for others someone to take them shopping or on an outing. Others seek dependable full-time personal care. We can work with your health professionals to help you manage your wellbeing and can help you access other services and advice if required. Arrangements can evolve to meet changing needs. You are in control, so you choose as little or as much help as you want – when you want it. You can rely on us to be a safe pair of hands. Contact our friendly team for a chat to see how our highly qualified and trained CareGivers can help you or a loved one.</p>
+              </div>
+            </footer>
           </div>
         )
     }

@@ -14,13 +14,8 @@ module.exports = {
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.css$/, loader: ['style-loader', 'css-loader'] },
       { test: /\.s(a|c)ss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] },
-      {
-        test: /\.mp3$/,
-        loader: 'file-loader',
-        query: {
-          name: 'static/media/[name].[hash:8].[ext]'
-        }
-      }
+      { test: /\.mp3$/, loader: 'file-loader', query: { name: 'static/media/[name].[hash:8].[ext]' }},
+      { test: /\.(jpe?g|gif|png|woff|woff2|eot|ttf|svg)$/i, use: [{ loader: 'url-loader', options: { limit: 10000 }}]},
     ]
   },
   devServer: {
