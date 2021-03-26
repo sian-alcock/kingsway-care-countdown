@@ -316,11 +316,10 @@ class App extends React.Component {
               <a href="https://kingswaycare.com/" title="Kingsway Care" className="logo">
                 <img src={imagefile}/>
               </a>
-              </div>
-      
+            </div>
             <div className="innerContainer">
             <h1 className="pageTitle">Let's Play Countdown!</h1>
-            <p className="introduction"><strong>Covid Lockdown</strong> is hard. You may have run out of things to talk about with your friends and family. So why not get together online and have fun playing our <strong>Countdown game</strong>. We hope we can do our bit to combat loneliness and isolation and bring a little more joy to your lives. <strong>Share with someone you can't wait to see in real life</strong>.</p>
+            <p className="introduction"><strong>Covid Lockdown</strong> is hard. You may have run out of things to talk about with your friends and family. So why not get together online, keep those brain cells active and have fun playing our <strong>Countdown game</strong>. We hope we can do our bit to combat loneliness and isolation and bring a little more joy to your lives. <strong>Share with someone you can't wait to see in real life</strong>.</p>
             <div className="socialShare">
               <FacebookShareButton
                 url={shareUrl}
@@ -347,7 +346,8 @@ class App extends React.Component {
               <EmailShareButton
                 url={shareUrl}
                 subject={title}
-                body="Covid Lockdown is hard. You may have run out of things to talk about with your friends and family. So why not get together online and have fun playing our Countdown game. We hope we can do our bit to combat loneliness and isolation and bring a little more joy to your lives."
+                body="Covid Lockdown is hard. You may have run out of things to talk about with your friends and family. So why not get together online, keep those brain cells active and have fun playing our <strong>Countdown game</strong>.
+                . We hope we can do our bit to combat loneliness and isolation and bring a little more joy to your lives."
                 className="share-button"
               >
                 <EmailIcon size={32} round />
@@ -496,8 +496,13 @@ class App extends React.Component {
             </div>
             </div>
             <footer>
-              <div className="innerContainer">
+              <div className="footerContainer">
+                <h2 class="footer-title">About Kingsway Care</h2>
                 <p>Kingsway Care enables independent living at home, whatever that means to you. For some it is practical help around the house, for others someone to take them shopping or on an outing. Others seek dependable full-time personal care. We can work with your health professionals to help you manage your wellbeing and can help you access other services and advice if required. Arrangements can evolve to meet changing needs. You are in control, so you choose as little or as much help as you want – when you want it. You can rely on us to be a safe pair of hands. Contact our friendly team for a chat to see how our highly qualified and trained CareGivers can help you or a loved one.</p>
+              <div class="contact-container">
+                <div class="contact-container-top">CONTACT OUR FRIENDLY TEAM FOR A CHAT</div>
+                <div class="contact-container-bottom">01273 077444 | <a class="contact-container-link" href="https://www.kingswaycare.com">WWW.KINGSWAYCARE.COM</a></div>
+              </div>
               </div>
             </footer>
           </div>

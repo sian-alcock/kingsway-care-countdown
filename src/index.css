@@ -10,17 +10,13 @@ body {
 }
 
 .headerBar {
-  position: relative;
-  height: 100%;
+  height: 100px;
   background-color: #fbce3e;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
 }
 
 .logo {
-  height: 100px;
+  height: 100%;
 }
 
 img {
@@ -30,10 +26,10 @@ img {
 }
 
 .pageTitle {
-  display: none;
-  padding: 5px 0;
+  /* padding: 5px 0; */
   color: #555555;
   text-align: center;
+  margin: 0;
 }
 
 .innerContainer {
@@ -46,7 +42,7 @@ img {
 
 .introduction {
   margin-bottom: 15px;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .instructionContainer {
@@ -244,32 +240,72 @@ img {
   display: none;
 }
 
-@media only screen and (min-width: 600px) {
-  .clock {
-    width: 400px;
-    height: 400px;
-  }
-
-  .letterContainer {
-    height: 50px;
-    max-width: 600px;
-    margin: 16px auto;
-  }
-
-  .letterDiv {
-    font-size: 40px;
-    width: 50px;
-    padding-bottom: 5px;
-  
-  }
-
-  .pageTitle {
-    display: block;
-  }
-  }
-
   footer {
     background-color: #fbce3e;
     padding: 1rem;
+
   }
+
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-title {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .contact-container {
+    display: inline-block;
+    background-color: #555555;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0.5rem;
+  }
+
+  .contact-container-top {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-container-bottom {
+    color: #fbce3e;
+    text-align: center;
+  }
+
+  .contact-container-link {
+    text-decoration: none;
+    color: #fbce3e;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .clock {
+      width: 400px;
+      height: 400px;
+    }
+  
+    .letterContainer {
+      height: 50px;
+      max-width: 600px;
+      margin: 16px auto;
+    }
+  
+    .letterDiv {
+      font-size: 40px;
+      width: 50px;
+      padding-bottom: 5px;
+    
+    }
+    .contact-container {
+      padding: 1rem;
+    }
+
+    .introduction {
+      font-size: 21px;
+    }
+    }
 
